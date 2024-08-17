@@ -17,6 +17,45 @@ hr {
     
 }
 
+ul {
+    list-style-type: none;
+}
+
+.todo-input {
+    width: 95%; /* full width */
+    padding: 5px; /* reduced padding */
+    margin-bottom: 10px;
+    font-size: 14px; /* smaller font size */
+    border: 1px solid #ccc; /* light gray border */
+    border-radius: 3px; /* slightly rounded corners */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); /* subtle shadow */
+  }
+  
+  .todo-input:focus {
+    border-color: #aaa; /* darker gray border on focus */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(0, 0, 0, 0.05); /* slightly more prominent shadow on focus */
+  }
+
+.submit-button {
+    background-color: #3498db; /* blue background */
+    color: #fff; /* white text */
+    border: none; /* no border */
+    padding: 10px 20px; /* some padding */
+    font-size: 16px; /* font size */
+    cursor: pointer; /* change cursor on hover */
+    border-radius: 5px; /* rounded corners */
+    transition: background-color 0.3s ease; /* smooth transition on hover */
+  }
+  
+  .submit-button:hover {
+    background-color: #2980b9; /* darker blue on hover */
+  }
+  
+  .submit-button:active {
+    background-color: #2980b9; /* keep darker blue on click */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* add shadow on click */
+  }
+
 @media only screen and (max-width: 480px) {
     main {
         flex-direction: column;

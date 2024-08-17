@@ -23,10 +23,11 @@ function addTask() {
     
     if (taskValue.trim() !== '') {
         ulElement = document.getElementById("ul");
+        const liElement = document.createElement("li");
         index++;
 
         // Retrive the value from the input field 
-        const inputElement = documenxt.createElement("input");
+        const inputElement = document.createElement("input");
         inputElement.type = "checkbox";
         inputElement.name = "task";
         inputElement.id = `task${index}`;
@@ -36,9 +37,9 @@ function addTask() {
         labelElement.htmlFor = `task${index}`;
         labelElement.textContent = taskValue;
 
-        ulElement.appendChild(inputElement);
-        ulElement.appendChild(labelElement);
-        ulElement.style.display = "block";
+        liElement.appendChild(inputElement);
+        liElement.appendChild(labelElement);
+        ulElement.appendChild(liElement);
 
         // Reset variables
         taskInput.value = "";
@@ -48,8 +49,8 @@ function addTask() {
 }
 
 function deleteTask() {
+    const ulElement = document.getElementById("ul");
     if (ulElement.value !== '') {
-        ulElement = document.getElementById("ul");
         ulElement.innerHTML = "";
     }
 };
